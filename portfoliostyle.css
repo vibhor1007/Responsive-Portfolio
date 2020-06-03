@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');/*for this font font awesome link cdn*/
+body{
+  font-family: 'Poppins', sans-serif;
+  margin: 0px;
+}
+*{
+  box-sizing: border-box;
+  margin: 0px;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+/* header*/
+header{
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  border-bottom: 1px solid #423940;
+  padding: 0px 15px;
+  z-index: 10;
+}
+header .row{
+  justify-content: space-between;
+  align-items: center;
+}
+header .brand-name a{
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  position: relative;
+}
+header .navabr ul{
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+header .navbar ul li{
+  display: inline-block;
+  margin-left: 35px;
+}
+header .navbar ul li a{
+  font-size: 15px;
+  text-decoration: none;
+  line-height: 72px;
+  color: rgb(246, 237, 247);
+  font-weight: 600;
+  position: relative;
+  display: block;
+}
+header .navbar ul li a::before{
+  content: '';
+  height: 3px;
+  background-color: #ffffff;
+  width:0px;
+  position: absolute;
+  right: 0px;
+  bottom: -1px;
+  transition: all .5s ease;
+}
+header .navbar ul li a:hover::before{
+  width: 100%;
+  left:0px;
+}
+header .navbar ul li a.active::before{
+  width: 100%;
+  left:0px;
+}
+.container{
+  max-width: 1140px;
+  margin: auto;
+}
+/*home*/
+.home{
+  height: 100vh;
+  background-image: url('Vibhorport.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.home .full-screen{
+  min-height: 100vh;
+}
+.home .home-content{
+  flex: 0 0 100%;
+  max-width: 100% ;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.home .home-content .block{
+  flex: 0 0 75%;
+  max-width: 75%;
+  padding-left: 35px;
+  border-left: 5px solid #ffffff;
+  margin-top: 50px;
+}
+.home .home-content .block h6{
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0px;
+  padding: 0px;
+}
+.home .home-content .block h1{
+  color: #ffffff;
+  font-size: 70px;
+  font-weight: 600;
+  margin: 0 ;
+  padding: 0px;
+  }
+  .home .home-content .block h4{
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0px;
+    padding: 0px;
+  }
+  .home .home-content .block .cv-btn{
+    padding-top: 0px;
+  }
+  .home .home-content .block .cv-btn a{
+    border-radius: 4px;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    width:25%;
+    padding: 12px 25px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all .5s ease;
+}
+.home .home-content .block .cv-btn a:hover{
+  background-color: #ffffff;
+  color: #000;
+}
+/* about me*/
+.about-me{
+  padding: 100px 15px;
+  background-color: #ffffff;
+}
+.about-me .section-title{
+  flex: 0 0 100%;
+  max-width: 100;
+  margin-bottom: 40px;
+}
+.about-me .section-title h1{
+  display: inline-block;
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #000000;
+  margin: 0px 0px 5px;
+  position: relative;
+}
+.about-me .section-title h1::before{
+  content: '';
+  left: 0px;
+  position: absolute;
+  right: 30%;/* this makes our blue bottom border made using before to 30% on the left side*/
+  height: 2px;
+  background-color: rgb(246, 50, 228);
+  bottom: 0px;
+}
+
+.about-me .about-content .img{
+  flex: 0 0 34%;
+  width: 34%;
+}
+.about-me .about-content .img img{
+  width: 100%;
+  display: block;
+  transform: rotateY(180deg);
+}
+.about-me .about-content .text{
+  display: block;
+  padding-left: 30px;
+  flex: 0 0 66%;
+  width: 66%;
+}
+.about-me .about-content .text h4{
+  font-size: 25px;
+  font-weight: 600;
+  margin: 0 0 5px;
+  color: #000;
+}
+.about-me .about-content .text h6{
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 15px;
+  color: #000;
+}
+.about-me .about-content .text h6 span{
+  color: rgb(246, 50, 228);
+}
+.about-me .about-content .text  p{
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgb(101, 107, 102);
+}
+.about-me .about-content .text .social-links{
+  padding-top: 25px;
+}
+.about-me .about-content .text .social-links a{
+  height: 30px;
+  width: 30px;
+  background-color: #000000;
+  border-radius: 3px;
+  display: inline-block;
+  border: 1px solid #000;
+  line-height: 28px;
+  text-align: center;
+  margin: 0px 1px;
+  transition: all .5s ease;
+}
+.about-me .about-content .text .social-links a:hover{
+  background-color: transparent;
+}
+.about-me .about-content .text .social-links a .fa{
+  color: #fff;
+  font-size: 15px;
+  transition: all .5s ease;
+}
+.about-me .about-content .text .social-links a .fa:hover{
+  color: #000;
+}
+/* Skills*/
+.skills{ /* copied same as about me till h1::before*/
+  padding: 100px 15px;
+  background-color: #ffffff;
+}
+.skills .section-title{
+  flex: 0 0 100%;
+  max-width: 100;
+  margin-bottom: 40px;
+}
+.skills .section-title h1{
+  display: inline-block;
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #000000;
+  margin: 0px 0px 5px;
+  position: relative;
+}
+.skills .section-title h1::before{
+  content: '';
+  left: 0px;
+  position: absolute;
+  right: 30%;/* this makes our blue bottom border made using before to 30% on the left side*/
+  height: 2px;
+  background-color: rgb(246, 50, 228);
+  bottom: 0px;
+}
+.skills .skills-content{
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding-right: 30px;
+}
+.align-items-center{
+  align-items: center;
+}
+.skills .img {
+flex:0 0 50%;
+max-width: 50%;
+}
+.skills .img img{
+  width: 100%;
+  display: block;
+}
+.skills .skills-content .skill-box{
+  flex: 0 0 80%;
+  max-width: 100%;
+  margin-bottom: 5%;
+}
+.skills .skills-content .skill-box h6{
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0px;
+}
+.skills .skills-content .skill-box .skill-bar{
+  background-color: #eee;
+  height: 6px;
+  position: relative;
+}
+.skills .skills-content .skill-box .skill-bar .skill-bar-in{
+  background-color: rgb(246, 50, 228);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+}
+.skills .skills-content .skill-box .skill-bar .skill-bar-in span{
+  position: absolute;
+  right: 0px;
+  top: -30px;
+}
